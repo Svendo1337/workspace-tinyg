@@ -147,9 +147,9 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
                         spjs.setSingleSelectMode();
                         spjs.init({
                             isSingleSelectMode: true,
-                            defaultBuffer: "tinyg",
+                            defaultBuffer: "grbl",
                             defaultBaud: 115200,
-                            bufferEncouragementMsg: 'For your device please choose the "tinyg" or "tinygg2" buffer in the pulldown and a 115200 baud rate before connecting.'
+                            bufferEncouragementMsg: 'For your device please choose the "grbl" buffer in the pulldown and a 115200 baud rate before connecting.'
                         });
                         //spjs.showBody();
                         //spjs.consoleToggle();
@@ -961,28 +961,6 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
                     });
                 }
             ); //End XYZ
-            
-            // TinyG
-            // http://jsfiddle.net/chilipeppr/XxEBZ/
-            // com-chilipeppr-tinyg
-            chilipeppr.load(
-                "com-chilipeppr-tinyg",
-                // Lauer's v2 (Jul 28th 2015) Fixed to {"sv":1}
-                "http://raw.githubusercontent.com/chilipeppr/widget-tinyg/master/auto-generated-widget.html",
-                // Danal's version
-                //"http://fiddle.jshell.net/Danal/6rq2wx3o/show/light/",
-                // Lauer's version
-                //"http://fiddle.jshell.net/chilipeppr/XxEBZ/show/light/",
-        
-                function () {
-                    cprequire(
-                    ["inline:com-chilipeppr-widget-tinyg"],
-            
-                    function (tinyg) {
-                        tinyg.init();
-                    });
-                }
-            ); //End TinyG
 
             chilipeppr.load(
               "com-chilipeppr-webrtcclient",
